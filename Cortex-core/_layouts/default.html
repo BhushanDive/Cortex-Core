@@ -24,19 +24,13 @@
     <!-- nav-bar -->
     <section id="nav">
         <div class="container-fluid">
-            <nav class="navbar navbar-dark navbar-expand">
-                <a href="#" class="navbar-brand">CORTEX-CORE</a>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="#">TWITTER</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#">ABOUT</a>
-                    </li>
-
-                </ul>
-            </nav>
+            <div class="nav">
+                <div class=" w-100 d-flex justify-content-end align-items-center">
+                    <a href="#" class="me-auto cortex">CORTEX-CORE</a>
+                    <a href="#" class="twitter">TWITTER</a>
+                    <a href="#" class="about">ABOUT</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -44,19 +38,17 @@
     <section id="tag-logo">
         <div class="container-fluid">
             <div class="row mx-auto">
-                <div class="col-6">
-                    NEW <br>
-                    AGE <br>
-                    TECH. <br>
-                </div>
-                <div class="col-6">
-                    lorem 
+                <div class="col-lg-12 logo-div">
+                    <img src="assets/images/logo.svg" alt="" class="logo">
                 </div>
             </div>
-
         </div>
-
     </section>
-    {{ content }}
+
+    <!-- article-lists -->
+    <section id="article-lists">
+        {{ content }}
+    </section>
+    
 </body>
 </html>

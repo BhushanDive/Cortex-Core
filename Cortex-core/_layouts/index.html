@@ -55,7 +55,7 @@
         {% for post in site.posts %}
             <ul class="article-ul">
                 <li>
-                    <a href="{{ post.url }}">
+                    <a href="{{post.permalink}}.html">
                         <article class="article-box">
                             <h3>{{ post.title}}</h3>
                             <address class="author">{{post.author}}</address>
@@ -66,6 +66,5 @@
             </ul>
         {% endfor %}
     </section>
-    
 </body>
 </html>

@@ -24,6 +24,26 @@
     
     <!-- PersonalCSS -->
     <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Twitter cards -->
+    <meta name="twitter:site"    content="@{{ site.twitter_username }}">
+    <meta name="twitter:creator" content="@{{ page.author }}">
+    <meta name="twitter:title"   content="{{ page.title }}">
+
+    {% if page.summary %}
+    <meta name="twitter:description" content="{{ page.summary }}">
+    {% else %}
+    <meta name="twitter:description" content="{{ site.description }}">
+    {% endif %}
+
+    {% if page.image %}
+    <meta name="twitter:card"  content="summary_large_image">
+    <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+    {% else %}
+    <meta name="twitter:card"  content="summary">
+    <meta name="twitter:image" content="{{ site.title_image }}">
+    {% endif %}
+    <!-- end of Twitter cards -->
 </head>
 <body>
     <!-- nav-bar -->
@@ -32,7 +52,7 @@
             <div class="nav">
                 <div class=" w-100 d-flex justify-content-end align-items-center">
                     <a href="index.html" class="me-auto cortex">CORTEX-CORE</a>
-                    <a href="#" class="twitter">TWITTER</a>
+                    <a href="https://twitter.com/home" target="_blank" class="twitter">TWITTER</a>
                     <a href="about.html" class="about">ABOUT</a>
                 </div>
             </div>
@@ -44,7 +64,7 @@
         <div class="container">
             <div class="row mx-auto">
                 <div class="col-sm-12 ">
-                    <img src="{{page.image}}" alt="" class="logo-div">
+                    <img src="{{page.image}}" alt="" class="image">
                 </div>
             </div>
         </div>
